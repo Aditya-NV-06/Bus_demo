@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Management App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
     <div class="container">
@@ -16,12 +18,12 @@
                 <li><a href="#buses" onclick="showSection('buses')">Buses</a></li>
                 <li><a href="#routes" onclick="showSection('routes')">Routes</a></li>
                 <li><a href="#drivers" onclick="showSection('drivers')">Drivers</a></li>
+                <li><a href="#List" onclick="showSection('List')">List</a></li>
                 <li><a href="#settings" onclick="showSection('settings')">Settings</a></li>
             </ul>
         </nav>
         <main class="content">
             <section id="dashboard" class="dashboard1">
-                
                     <h1>Dashboard</h1>
                     <div class="dashboard-stats">
                         <div class="stat">
@@ -36,6 +38,40 @@
                             <h3>Total Drivers</h3>
                             <p id="totalDrivers">0</p>
                         </div>
+            </section>
+            <section id="List">
+            <div class="container1">
+                <h1>Bus Availability System</h1>
+                <form id="bookingForm">
+                    <div class="custom-select">
+                        <label for="route">Select Route:</label>
+                        <div class="select-box">
+                            <div class="selected-option" id="selectedRoute">Route 1</div>
+                            <div class="options" id="routeOptions">
+                                <div class="option" data-value="route1">Route 1</div>
+                                <div class="option" data-value="route2">Route 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-date">
+                        <label for="date">Select Date:</label>
+                        <input type="text" id="date" name="date" placeholder="Select Date" readonly>
+                    </div>
+        
+                    <button type="submit">Check Availability</button>
+                </form>
+        
+                <div id="availability"></div>
+                <div id="seatSelection" class="hidden">
+                    <h2>Select Seats</h2>
+                    <div id="seatMap"></div>
+                    <button id="confirmBooking">Confirm Booking</button>
+                </div>
+                <div id="confirmation" class="hidden">
+                    <h2>Booking Confirmed</h2>
+                    <p>Your booking has been confirmed.</p>
+                </div>
+            </div>
             </section>
             <section id="buses">
                 <h1>Buses</h1>
@@ -75,5 +111,6 @@
         </main>
     </div>
     <script src="script.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
