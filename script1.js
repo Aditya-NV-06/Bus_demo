@@ -98,7 +98,8 @@ const busData = {
     console.log('Selected seats:', selectedSeats);
  });
 
-const ctx = document.getElementById('myChart').getContext('2d');
+
+ const ctx = document.getElementById('myChart').getContext('2d');
  const myChart = new Chart(ctx, {
      type: 'line', // Specify the type of chart
      data: {
