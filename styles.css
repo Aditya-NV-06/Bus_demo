@@ -92,12 +92,6 @@ section {
     transform: translateY(20px);
     animation: fadeIn 0.5s forwards;
 }
-main > section {
-    display: none; /* hide all sections initially */
-  }
-  main > section#dashboard {
-    display: block; /* show dashboard section initially */
-  }
 
 @keyframes fadeIn {
     to {
@@ -243,3 +237,12 @@ li {
    justify-content: center;
     margin-bottom: 20px;
 }
+
+
+/* Base styles (mobile-first) */
+
+
+.container1{ 
+    flex-direction:column;
+}
+

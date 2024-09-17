@@ -1,0 +1,151 @@
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+/* Custom Select Styles */
+.custom-select {
+    position: relative;
+    margin-bottom: 20px; /* Space between dropdown and other elements */
+}
+
+.select-box {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ccc; /* Border for the select box */
+    border-radius: 5px; /* Rounded corners */
+    background-color: white; /* Background color */
+}
+
+.selected-option {
+    padding: 10px; /* Padding for selected option */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options {
+    position: absolute;
+    top: 100%; /* Position below the select box */
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc; /* Border for options */
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    background-color: white; /* Background color for options */
+    display: none; /* Hide options by default */
+    z-index: 10; /* Ensure options are above other elements */
+}
+
+.option {
+    padding: 10px; /* Padding for each option */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.option:hover {
+    background-color: #f4f4f4; /* Highlight on hover */
+}
+
+/* Show options when selected */
+.select-box.active .options {
+    display: block; /* Show options when active */
+}
+
+/* Custom Date Picker Styles */
+.custom-date {
+    margin-bottom: 20px; /* Space between date picker and other elements */
+}
+
+.flatpickr-input {
+    padding: 10px; /* Padding for date input */
+    border: 1px solid #ccc; /* Border for date input */
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 20px); /* Full width minus margins */
+}
+
+/* Button Styles with Margin */
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width on small screens */
+    margin-top: 10px; /* Add vertical margin to buttons */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Seat Map Styles */
+#seatMap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Responsive grid */
+    grid-gap: 10px;
+}
+
+.seat {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #4CAF50; /* Green for selected seats */
+    color: white; /* White text for selected seats */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    button {
+        font-size: 16px; /* Increase button font size for touch targets */
+        padding: 12px; /* Increase padding for touch targets */
+    }
+
+    .flatpickr-input {
+        font-size: 16px; /* Increase date picker font size for touch targets */
+    }
+
+    #seatMap {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Smaller seat size on mobile */
+        grid-gap: 5px; /* Smaller gap between seats */
+    }
+
+    .seat {
+        padding: 8px; /* Adjust seat padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px; /* Further reduce button font size on very small screens */
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+
+    .flatpickr-input {
+        font-size: 14px; /* Further reduce date picker font size on very small screens */
+    }
+
+    .seat {
+        font-size: 12px; /* Further adjust seat font size on very small screens */
+        padding: 6px; /* Adjust seat padding for very small screens */
+    }
+}
