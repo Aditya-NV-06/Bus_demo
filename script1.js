@@ -97,3 +97,27 @@ const busData = {
     // Display selected seats or perform booking logic
     console.log('Selected seats:', selectedSeats);
  });
+
+const ctx = document.getElementById('myChart').getContext('2d');
+ const myChart = new Chart(ctx, {
+     type: 'line', // Specify the type of chart
+     data: {
+         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'], // X-axis labels
+         datasets: [{
+             label: 'My First dataset',
+             backgroundColor: 'rgba(255, 99, 132, 0.2)', // Background color
+             borderColor: 'rgba(255, 99, 132, 1)', // Border color
+             data: [0, 10, 5, 2, 20, 30, 45], // Data points
+         }]
+     },
+     options: {
+         responsive: true,
+         scales: {
+             y: {
+                 beginAtZero: true // Start y-axis at zero
+             }
+         }
+     }
+ });
+
+
